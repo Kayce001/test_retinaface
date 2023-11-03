@@ -1,0 +1,19 @@
+During the development process, I encountered some challenges, but these were necessary in the process of finding the best solution to the problem.
+
+**Challenges**:
+
+1. **Object-oriented design and program structure**: I needed to find the appropriate level of abstraction in software design, in order to strike a balance between keeping the code clear and modular and avoiding complexity.
+
+2. **Handling unpredictable inputs**: Users might provide inputs that don't meet the expectations, for example, incorrect file paths or images in non-target formats. I needed to ensure that these inputs are handled appropriately with error handling.
+
+**Solution approaches and reasons for technical choices**:
+
+1. **Modular function design**: I chose to keep the responsibilities of the functions unitized, which makes them easier to be tested and reused. I encapsulated different steps such as reading data, loading the model, detecting faces, and performance evaluation in different methods.
+
+2. **Using argparse**: To provide a customizable and easy-to-use command-line interface, I chose the argparse library. It can conveniently handle command-line parameters and options.
+
+3. **Error handling**: I added error handling code where errors might occur. This helps handle errors and exceptional inputs gracefully.
+
+4. **Performance evaluation metric**: In this project, I chose accuracy as the evaluation metric for two main reasons. Firstly, accuracy is an intuitive and easy-to-understand metric, which is very suitable for initial stage model evaluation. Secondly, based on the format we currently save results, accuracy can conveniently be calculated from the result files. Nevertheless, it's worth noting that for more complex scenarios or future optimization, we might choose more sophisticated evaluation metrics, such as mean Average Precision (mAP). This metric not only considers the accuracy of the model, but also its precision and recall, which are very important when dealing with detection tasks.
+
+In summary, when solving problems, I strive for a balance between usability, effectiveness, and maintainability. All design decisions are made based on this goal.
