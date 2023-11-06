@@ -12,25 +12,47 @@ This project uses RetinaFace, a face detection model, to process images in a spe
 
 ## Installation
 
-1. Confirm you have a compatible Python version installed (3.10+ required) and you're running Ubuntu 20.04 or later.
+There are two methods to set up the environment for this project:
 
+### Method 1: Using Conda Environment File
+
+To install using the provided `environment.yml` file within the `test_retinaface` directory, follow these steps:
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/Kayce001/test_retinaface.git
+   ```
+2. Navigate into the cloned directory:
+   ```
+   cd test_retinaface
+   ```
+3. Create and activate the conda environment:
+   ```bash
+   conda env create -f environment.yml
+   conda activate retinaface
+   ```
+4. Clone the Pytorch_Retinaface repository: 
+   ```
+   git clone https://github.com/biubug6/Pytorch_Retinaface.git
+   ```
+5. Download and install the RetinaFace model to the `./weights` folder. Just follow the instructions provided in the Pytorch_Retinaface repository.
+
+### Method 2: Manual Installation
+
+1. Confirm you have a compatible Python version installed (3.10+ required) and you're running Ubuntu 20.04 or later.
 2. Clone the Pytorch_Retinaface repository: 
    ```
    git clone https://github.com/biubug6/Pytorch_Retinaface.git
    ```
-   
 3. Navigate into the cloned directory: 
    ```
    cd Pytorch_Retinaface
    ```
-
-4. Copy the project's `requirements.txt` and `script.py` files into the `Pytorch_Retinaface` directory.
-
+4. Copy the project's `requirements.txt`、`unittest_face_detection.py` and `script.py` files into the `Pytorch_Retinaface` directory.
 5. Install the required Python libraries: 
    ```
    pip install -r requirements.txt
    ```
-
 6. Download and install the RetinaFace model to the `./weights` folder. Just follow the instructions provided in the Pytorch_Retinaface repository.
 
 ## Usage
@@ -76,3 +98,4 @@ Accuracy: XX.XX%
 ## Notes
 
 This script can take a while to process a large amount of images. Make sure you have enough disk space to store the output results.
+
