@@ -1,17 +1,19 @@
 name: retinaface
 channels:
+  - pytorch # Added the PyTorch channel for specific versions of torch and torchvision
   - defaults
 dependencies:
   - python=3.10
   - pip
   - pip:
     - opencv-python
-    - torch
+    - torch==1.13.1 # Specifying the exact version of torch required
+    - torchvision==0.14.1 # Specifying the exact version of torchvision required
     - numpy
-    - matplotlib # if needed for plotting
-    - jupyter # if you need an interactive environment
-    - scipy # if needed for scientific computing
+    - matplotlib # Optional, for plotting
+    - jupyter # Optional, for an interactive environment
+    - scipy # Optional, for scientific computing
 
-# To use this environment.yml file, you would run:
+# To use this environment.yml file, run the following commands:
 # conda env create -f environment.yml
 # conda activate retinaface
