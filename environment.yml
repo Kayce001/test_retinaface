@@ -1,0 +1,17 @@
+name: retinaface
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - opencv-python
+    - torch
+    - numpy
+    - matplotlib # if needed for plotting
+    - jupyter # if you need an interactive environment
+    - scipy # if needed for scientific computing
+
+# To use this environment.yml file, you would run:
+# conda env create -f environment.yml
+# conda activate retinaface
