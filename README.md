@@ -18,22 +18,19 @@ There are two methods to set up the environment for this project:
 
 To install using the provided `environment.yml` file within the `test_retinaface` directory, follow these steps:
 
-1. Clone the repository:
+1. Clone the Pytorch_Retinaface repository: 
    ```
-   git clone https://github.com/Kayce001/test_retinaface.git
+   git clone https://github.com/biubug6/Pytorch_Retinaface.git
    ```
 2. Navigate into the cloned directory:
    ```
-   cd test_retinaface
+   cd Pytorch_Retinaface
    ```
-3. Create and activate the conda environment:
+3. Copy the project's `environment.yml`、`unittest_face_detection.py` and `script.py` files into the `Pytorch_Retinaface` directory.
+4. Create and activate the conda environment:
    ```bash
    conda env create -f environment.yml
    conda activate retinaface
-   ```
-4. Clone the Pytorch_Retinaface repository: 
-   ```
-   git clone https://github.com/biubug6/Pytorch_Retinaface.git
    ```
 5. Download and install the RetinaFace model to the `./weights` folder. Just follow the instructions provided in the Pytorch_Retinaface repository.
 
@@ -58,7 +55,7 @@ To install using the provided `environment.yml` file within the `test_retinaface
 ## Usage
 
 ```
-python script.py --input_folder /path/to/images --output_file /path/to/output_file --truth /path/to/truth_file [--m <model_path>] [--network <network>] [--confidence_threshold <confidence_threshold>] [--nms_threshold <nms_threshold>] [--cpu]
+python script.py --input_folder /path/to/images --output_file /path/to/output_file --truth /path/to/truth_file --m /path/to/model [--network <network>] [--confidence_threshold <confidence_threshold>] [--nms_threshold <nms_threshold>] [--cpu]
 ```
 
 Options:
