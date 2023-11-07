@@ -67,7 +67,7 @@ python script.py --input_folder /path/to/images --output_file /path/to/output_fi
 - `--m`: Path to the trained model file (default: './weights/mobilenet0.25_Final.pth').
 - `--network`: Backbone network ('mobile0.25' or 'resnet50', default: 'mobile0.25').
 - `--confidence_threshold`: Confidence threshold for detection (default: 0.6).
-- `--nms_threshold`: Non-maximum suppression threshold (default: 0.4).
+- `--nms_threshold`: Non-maximum suppression threshold (default: 0.92).
 - `--cpu`: Enable CPU inference (if no GPU is available).
 
 The `--truth` file format:
