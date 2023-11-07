@@ -54,24 +54,28 @@ To install using the provided `environment.yml` file within the `test_retinaface
    ```
 6. Download and install the RetinaFace model to the `./weights` folder. Just follow the instructions provided in the Pytorch_Retinaface repository.
 
+
 ## Usage
 
+Run the script with the following command:
+
 ```
-python script.py --input_folder /path/to/images --output_file /path/to/output_file --truth /path/to/truth_file --m /path/to/model [--network <network>] [--confidence_threshold <confidence_threshold>] [--nms_threshold <nms_threshold>] [--cpu]
+python script.py --input_folder /path/to/images --output_file /path/to/output_file --truth /path/to/truth_file --ground_truth /path/to/ground_truth_folder --m /path/to/model [--network <network>] [--confidence_threshold <confidence_threshold>] [--nms_threshold <nms_threshold>] [--cpu]
 ```
 
 Options:
 
 - `--m`: Path to the trained state_dict file (default: './weights/mobilenet0.25_Final.pth').
 - `--network`: Choice of backbone network. Options are: 'mobile0.25' or 'resnet50' (default: 'mobile0.25').
-- `--cpu`: Use this flag to enable cpu inference (default: False).
+- `--cpu`: Use this flag to enable CPU inference (default: False).
 - `--confidence_threshold`: Confidence threshold for face detection (default: 0.6).
 - `--nms_threshold`: Non-maximum suppression threshold (default: 0.92).
 - `--input_folder`: Path to the folder containing the images to process.
 - `--output_file`: Path to the output file where the results will be written (default: 'output.txt').
 - `--truth`: Path to the file containing ground truth labels for the face counts per image (optional).
+- `--ground_truth`: Path to the folder containing ground truth bounding boxes (optional).
 
-The `--truth` file should be a text file of space-separated values, with one row per image file. Each row should contain the image filename and the true number of faces in that image. Example:
+The `--truth` file should contain space-separated values, with one row per image file. Each row should have the image filename and the true number of faces in that image:
 
 ```
 image1.jpg 3
@@ -80,19 +84,31 @@ image3.jpg 0
 ...
 ```
 
+The `--ground_truth` folder should contain `.txt` files with the same basename as the image files. Each `.txt` file should contain space-separated values representing the bounding boxes in the format (x1, y1, x2, y2), one bounding box per line.
+
 ## Outputs
 
-Outputs are written to the provided output file (default 'output.txt'). Each line represents an image, with the format:
+Outputs are written to the specified output file. Each line in the output file represents one image with the following format:
 
 ```
 <image_filename> <detected_face_count>
 ```
 
-If a ground truth file is provided, the script will also print the detection accuracy to the console:
+Additionally, if the ground truth bounding boxes are provided, the script will evaluate the detection results using precision, recall, and F1 score, and print them to the console:
+
+```
+Precision: XX.XX%
+Recall: XX.XX%
+F1 Score: XX.XX%
+```
+
+If a ground truth labels file is provided, the script will also calculate and print the overall accuracy:
 
 ```
 Accuracy: XX.XX%
 ```
+```
+
 
 ## Test Script
 
