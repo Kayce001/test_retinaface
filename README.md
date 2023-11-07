@@ -27,6 +27,7 @@ To install using the provided `environment.yml` file within the `test_retinaface
    cd Pytorch_Retinaface
    ```
 3. Copy the project's `environment.yml`、`unittest_face_detection.py` and `script.py` files into the `Pytorch_Retinaface` directory.
+   
 4. Create and activate the conda environment:
    ```bash
    conda env create -f environment.yml
@@ -46,6 +47,7 @@ To install using the provided `environment.yml` file within the `test_retinaface
    cd Pytorch_Retinaface
    ```
 4. Copy the project's `requirements.txt`、`unittest_face_detection.py` and `script.py` files into the `Pytorch_Retinaface` directory.
+
 5. Install the required Python libraries: 
    ```
    pip install -r requirements.txt
