@@ -116,9 +116,8 @@ The `unittest_face_detection.py` script is designed to test the `read_data` func
 
 To execute the test script, run the following command:
 
-```bash
-python unittest_face_detection.py
 ```
+python unittest_face_detection.py
 ```
 
 
