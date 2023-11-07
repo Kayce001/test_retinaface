@@ -115,9 +115,10 @@ Accuracy: XX.XX%
 The `unittest_face_detection.py` script is designed to test the `read_data` function within the `script` module. This function is expected to correctly read and parse a file containing image filenames along with the number of faces detected in each image. The script verifies that the function returns a dictionary with image filenames as keys and the number of faces as corresponding values. Automated tests like this are crucial for ensuring the reliability and accuracy of face detection software over different updates and changes in the codebase.
 
 To execute the test script, run the following command:
-```
+
+```bash
 python unittest_face_detection.py
-```
+
 
 ## Notes
 
