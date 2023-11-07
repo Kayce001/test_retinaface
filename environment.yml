@@ -10,7 +10,7 @@ dependencies:
     - torch==1.13.1 # Specifying the exact version of torch required
     - torchvision==0.14.1 # Specifying the exact version of torchvision required
     - numpy
-    - matplotlib # Optional, for plotting
+    - matplotlib 
     - jupyter # Optional, for an interactive environment
     - scipy # Optional, for scientific computing
 
