@@ -90,9 +90,20 @@ Results are saved to the `--output_file` in the format:
 <image_filename> <detected_face_count>
 ```
 
-If ground truth bounding boxes are provided, the script evaluates the detections with precision, recall, and F1 score, displayed in the console.
+Additionally, if the ground truth bounding boxes are provided, the script will evaluate the detection results using precision, recall, and F1 score, and print them to the console:
 
-If a ground truth labels file is provided, the script calculates and displays the overall accuracy.
+```
+Precision: XX.XX%
+Recall: XX.XX%
+F1 Score: XX.XX%
+```
+
+If a ground truth labels file is provided, the script will also calculate and print the overall accuracy:
+
+```
+Accuracy: XX.XX%
+```
+```
 
 ## Test Script
 
