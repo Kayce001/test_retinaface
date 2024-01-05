@@ -1,6 +1,6 @@
 # RetinaFace Image Assessment Project
 
-This project involves using RetinaFace, a state-of-the-art face detection model, to analyze images in a specified directory and report the number of faces detected in each. Optionally, the detected counts can be compared to a ground truth file to calculate the accuracy of the face detection.
+This project involves using RetinaFace, a face detection model, to analyze images in a specified directory and report the number of faces detected in each. Optionally, the detected counts can be compared to a ground truth file to calculate the accuracy of the face detection.
 
 ## Dependencies
 
